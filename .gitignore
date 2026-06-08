@@ -1,0 +1,15 @@
+
+venv/
+Data/
+
+__pycache__/
+*.pyc
+*.pyo
+
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
