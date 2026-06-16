@@ -13,7 +13,7 @@ def get_embedding(face):
     face = cv2.resize(face, (160, 160))
     face = face.astype('float32') / 255.0
     face = np.transpose(face, (2, 0, 1))
-    face = torch.tensor(face).unsqueeze(0)
+    face = torch.tensor(face, dtype=torch.float32).unsqueeze(0)
 
     embedding = model(face).detach().numpy()[0]
     embedding = embedding / np.linalg.norm(embedding)  # Normalize
